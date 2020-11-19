@@ -210,7 +210,8 @@ for configs in permutations(range(5, 10)):
             result = amp.send(result)
             try:
                 next(amp)
-            # The code has exited
+            # The code has exited. Note that I can't break here because the other
+            #   machines may be able to continue
             except StopIteration:
                 stopped = True
 
