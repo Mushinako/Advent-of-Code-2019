@@ -21,9 +21,9 @@ for layer in layers[::-1]:
     for i in range(HEIGHT):
         for j, cell in enumerate(layer[i * WIDTH : i * WIDTH + WIDTH]):
             if cell == 0:
-                picture[i][j] = "#"
-            elif cell == 1:
                 picture[i][j] = " "
+            elif cell == 1:
+                picture[i][j] = "█"
 
 for row in picture:
     print("".join(row))
