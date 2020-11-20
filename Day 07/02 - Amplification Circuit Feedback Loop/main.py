@@ -64,9 +64,8 @@ def parse_op_code(op_code: int) -> Tuple[int, int, int]:
         op_code (int): Full operation code
 
     Returns:
-        (int): Operation (OP_CODES)
-        (int): Parameter 1 type (PARAM_TYPES)
-        (int): Parameter 2 type (PARAM_TYPES)
+        (int)  : Operation (OP_CODES)
+        (int*2): Parameter 1 & 2 types (PARAM_TYPES)
     """
     # Get rid of everything beyond thousand's place
     op_code %= 10000
@@ -86,9 +85,8 @@ def get_op_code(codes: Code_List) -> Tuple[int, int, int]:
         codes_iter (Code_List): Iterator of the integer codes
 
     Returns:
-        (int): Operation (OP_CODES)
-        (int): Parameter 1 type (PARAM_TYPES)
-        (int): Parameter 2 type (PARAM_TYPES)
+        (int)  : Operation (OP_CODES)
+        (int*2): Parameter 1 & 2 types (PARAM_TYPES)
     """
     op_code = next(codes)
     return parse_op_code(op_code)
