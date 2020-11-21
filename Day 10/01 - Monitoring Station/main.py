@@ -50,4 +50,5 @@ for rb, cb in asteroid_locations:
 
     max_observed = max(max_observed, len(slopes))
 
+# Print output
 print(max_observed)

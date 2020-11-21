@@ -81,4 +81,5 @@ slopes_sorted = [
 # We know that first turn is 221 shots, so 200 is within the first turn
 x, y = slopes_sorted[199][0]
 
+# Print output
 print(100 * (x + max_x) + (y + max_y))
